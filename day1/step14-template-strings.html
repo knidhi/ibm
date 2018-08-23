@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 210px;
+            border: 1px solid gray;
+            float : left;
+            margin: 10px;
+        }
+        .box h1, h2{
+           margin: 0px;
+           text-align: center;
+           font-family: arial;
+        }
+        .box img{
+           width: 100%;
+        }
+    </style>
+    <script>
+    let data = [
+        {
+            title : "Batman",
+            firstname : "Brcue",
+            lastname : "Wayne",
+            power : 7,
+            photo : "images/batman.jpg"
+        },
+        {
+            title : "Superman",
+            firstname : "Clark",
+            lastname : "Kent",
+            power : 9,
+            photo : "images/superman.jpg"
+        },
+        {
+            title : "WonderWomen",
+            firstname : "Prince",
+            lastname : "Diana",
+            power : 8,
+            photo : "images/wonderwoman.png"
+        },
+        {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark",
+            power : 7,
+            photo : "images/ironman.jpg"
+        },
+    ];
+    window.onload = function(){
+       document.querySelector("button").addEventListener("click", function(){
+        for(var i = 0; i< data.length; i++){
+            document.body.innerHTML += `
+            <div class="box">
+                <h1>${data[i].firstname} ${data[i].lastname}</h1>
+                <h2>${data[i].title}</h2>
+                <img src="${data[i].photo}" alt="${data[i].title .toLocaleLowerCase()}">
+                <input type="range" min="0" max="10" value="${data[i].power}">
+            </div>`
+        }
+       })
+    }
+    </script>
+</head>
+<body>
+    <button>Get Heroes</button>
+    <hr>
+    
+</body>
+</html>

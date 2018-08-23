@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var obj1 = new Object();
+        var obj2 = {};
+        var obj3 = Object.create(null);
+        obj2.name = "Bruce";
+        // console.log(obj2.name);// Bruce
+        obj2.name = "Joker";
+        // console.log(obj2.name);// Joker
+        ///--------------------------
+
+/*
+var hero = Object.create(null);
+Object.defineProperty(hero, "title",{
+    value : "Batman",
+    configurable : true
+});
+for(var prop in hero){
+    console.log(prop, hero[prop]);
+};
+Object.defineProperty(hero, "title",{
+    value : "Superman",
+                        enumerable : true
+                    });
+                    for(var prop in hero){
+                       console.log(prop, hero[prop]);
+                    };
+*/
+var hero = Object.create(null);
+Object.defineProperty(hero, "title",{
+    value : "Batman",
+    writable : true
+});
+Object.defineProperty(hero, "titleAccess",{
+    get :function(){
+        return this.title
+    },
+    set : function(newtitle){
+        this.title = newtitle;
+    }
+});
+
+console.log(hero.titleAccess);
+hero.titleAccess = "Joker";
+console.log(hero.titleAccess);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var cart = {
+            productVal : () =>{
+                return 100;
+            },
+            saleValue : function(){
+                var addProfit = () => {
+                    return this.productVal() * 0.2;
+                };
+                return addProfit()+this.productVal();
+            }
+        };
+        console.log(cart.saleValue());// 120
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

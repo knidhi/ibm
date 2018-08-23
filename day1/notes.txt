@@ -1,0 +1,25 @@
+npm install express
+
+short cut
+npm i express
+
+create a file called 
+server.js
+
+
+type the following in the cmd / terminal
+node server.js
+===================================
+
+npm install typescript -g
+
+tsc -v
+create one.ts
+
+navigate to the folder containing your typescript file
+in the terminal window
+tsc one.ts
+
+tsc --init
+
+

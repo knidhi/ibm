@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Declaring Variables</title>
+    <script>
+        var hero = {
+            title : "Batman",
+            power : 8
+        };
+
+        function checkPower(){
+            if(hero.power > 7){
+                let temptitle = "Batman is Strong";
+                hero.title = temptitle;
+                console.log(temptitle, "19");//
+            }
+        };
+
+        checkPower();
+        console.log(hero.title);// Batman
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
