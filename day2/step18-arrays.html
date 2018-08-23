@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // let arr = [8,3,1,9,4,2,6, 11, 15, 19];
+        let arr = [
+            {title : "batman", power : 7},
+            {title : "superman", power : 9},
+            {title : "ironman", power : 8},
+            {title : "spiderman", power : 6},
+            ]
+        console.log(arr.sort(sortFun));
+        function sortFun(hero1, hero2){
+            if(hero1.power < hero2.power){
+                return -1
+            }else if( hero1.power > hero2.power ){
+                return 1
+            }else{
+                return 0
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

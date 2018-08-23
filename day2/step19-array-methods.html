@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let arr = [8,3,9,4,2,6, 11, 15, 19];
+    /*
+        arr.forEach(function(value, idx, array){
+           //  console.log(arguments.length);
+            console.log(value, idx, array);
+        });
+    */
+    /*
+        let modifiedarr = arr.map(function(val){
+                return val*2;
+        });
+        console.log(modifiedarr);
+    */
+    /*
+    var modifiedarr = arr.filter(function(val){
+        return val % 2 === 0
+    });
+    console.log(modifiedarr);
+    */
+    /*
+    var modifiedarr = arr.every(function(val){
+        return val > 1
+    });
+    console.log(modifiedarr);
+    */
+    /*
+    var modifiedarr = arr.some(function(val){
+        return val > 100
+    });
+    console.log(modifiedarr);
+    */
+    var modifiedarr = arr.reduce(function(init, val){
+        return init+val;
+    });
+    console.log(modifiedarr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        function composition(fun1, fun2){
+            return function(num){
+                return fun1( fun2(num) )
+            }
+        };
+        
+        function firstfunction(num){
+            return num*2
+        };
+        function secondfunction(num){
+            return num+2
+        };
+        
+        var compose = composition(firstfunction, secondfunction);
+        console.log( compose(5) );
+        */
+
+        function addPower(pow){
+            return function(hero){
+                return {
+                    title : hero.title,
+                    power : pow
+                }
+            }
+        };
+
+        let commonman = {
+            title : "Kit"
+        };
+/*
+var actor = addPower(5);
+actor(commonman);
+*/
+/*
+console.log(
+    addPower(5)(commonman)
+);
+*/
+commonman = addPower(5)(commonman);
+console.log(commonman);// 
+</script>
+</head>
+<body>
+    
+</body>
+</html>

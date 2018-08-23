@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin: 10px;
+        float: left;
+    }
+    .boxer{
+        width: 800px;
+        height: 400px;
+        background-color: cornflowerblue;
+        border: 2px solid gray;
+    }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelectorAll("button")[0].addEventListener("click", addBox);
+            document.querySelectorAll("button")[1].addEventListener("click", removeBox);
+            document.querySelector(".boxer").addEventListener("click", removeHandler);
+        });
+        function addBox(evt){
+            //alert(evt.target.innerHTML);// button
+            var elm = document.createElement("div");
+                elm.setAttribute("class", "box");
+            document.querySelector(".boxer").appendChild(elm);
+        }
+        function removeBox(evt){
+           //alert(evt.target.innerHTML);// button
+            var elm = document.querySelector(".boxer").lastChild;
+            document.querySelector(".boxer").removeChild(elm);
+        }
+        function removeHandler(evt){
+            /*
+            event.target
+            event.type
+            event.currentTarget
+            */
+            // var elm = evt.target;
+            console.log(evt.target);
+            if(evt.target.getAttribute("class") === 'box'){
+                document.querySelector(".boxer").removeChild(evt.target);
+            }else{
+                alert("please click on the box")
+            }
+            // document.querySelector(".boxer").removeChild();
+        }
+    </script>
+</head>
+<body>
+    <button>Add</button>
+    <button>Remove</button>
+    <hr>
+    <div class="boxer"></div>
+</body>
+</html>
